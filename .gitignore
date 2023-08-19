@@ -34,4 +34,4 @@
 node_modules/
 
 # Ignore notes file
-install_guide/
+install_guide
