@@ -31,7 +31,4 @@
 /config/master.key
 
 # Ignoew node files
-node_modules/
-
-# Ignore notes file
-install_guide
+/node_modules
