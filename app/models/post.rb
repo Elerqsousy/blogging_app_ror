@@ -1,12 +1,12 @@
 class Post < ApplicationRecord
   # user post assosiation
-  belongs_to :author, class_name: 'User', foreign_key: "Author_id"
+  belongs_to :author, class_name: 'User', foreign_key: 'Author_id'
 
   # post like assosiation
-  has_many :likes, dependent: :destroy, foreign_key: "Post_id"
+  has_many :likes, dependent: :destroy, foreign_key: 'Post_id'
 
   # post comment assosiation
-  has_many :comments, dependent: :destroy, foreign_key: "Post_id"
+  has_many :comments, dependent: :destroy, foreign_key: 'Post_id'
 
   after_save :update_user_posts_counter
 

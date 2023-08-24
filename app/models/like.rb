@@ -1,7 +1,7 @@
 class Like < ApplicationRecord
   # user post like assosiation
-  belongs_to :user,class_name: 'User', foreign_key: "User_id"
-  belongs_to :post,class_name: 'Post', foreign_key: "Post_id"
+  belongs_to :user, class_name: 'User', foreign_key: 'User_id'
+  belongs_to :post, class_name: 'Post', foreign_key: 'Post_id'
 
   after_save :update_post_like_count
 
