@@ -1,12 +1,12 @@
 class Post < ApplicationRecord
   # user post assosiation
-  belongs_to :author, class_name: 'User', foreign_key: 'Author_id'
+  belongs_to :Author, class_name: 'User'
 
   # post like assosiation
-  has_many :likes, dependent: :destroy, foreign_key: 'Post_id'
+  has_many :likes, dependent: :destroy
 
   # post comment assosiation
-  has_many :comments, dependent: :destroy, foreign_key: 'Post_id'
+  has_many :comments, dependent: :destroy
 
   after_save :update_user_posts_counter
 
@@ -18,6 +18,6 @@ class Post < ApplicationRecord
 
   def update_user_posts_counter
     posts_count = Post.where(Author_id: self.Author_id).count
-    author.update(PostsCounter: posts_count)
+    User.update(PostsCounter: posts_count)
   end
 end
