@@ -1,10 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Blogging App</b></h3>
   <p>built with Ruby on Rails</p>
 
@@ -42,13 +38,6 @@
 ## 🛠 Built With <a name="built-with"></a>
 Ruby on Rails
 ### Tech Stack <a name="tech-stack"></a>
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
 
 <details>
   <summary>Server</summary>
@@ -136,8 +125,6 @@ To run the project, execute the following command:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - **Adding feature to create Accounts**
 - **Adding Feature to Create posts**
