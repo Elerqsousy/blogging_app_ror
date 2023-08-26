@@ -10,6 +10,10 @@ class Post < ApplicationRecord
 
   after_save :update_user_posts_counter
 
+  validates :Title, presence: true, length: { maximum: 250 }
+  validates :CommentsCounter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :LikesCounter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def recent_five_comments
     Comment.where(Post_id: id).order(created_at: :desc).first(5)
   end

@@ -8,7 +8,7 @@ class Like < ApplicationRecord
   private
 
   def update_post_like_count
-    like_count = like.where(Post_id: self.Post_id).count
+    like_count = Like.where(Post_id: self.Post_id).count
     post.update(LikesCounter: like_count)
   end
 end
